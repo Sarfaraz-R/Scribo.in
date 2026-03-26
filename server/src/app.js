@@ -25,7 +25,7 @@ const app = express();
    ───────────────────────────────────────────────────────────── */
 const allowedOrigins = process.env.CORS_ORIGIN
   ? process.env.CORS_ORIGIN.split(',').map((origin) => origin.trim())
-  : ['https://scribo.in/'];
+  : ['https://scribo.in'];
 
 const limiter = rateLimit({
   windowMs: 15 * 60 * 1000,
