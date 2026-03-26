@@ -3,7 +3,7 @@ import axios from 'axios';
 import { store } from '../store/store';
 import { setUser, logout } from '../store/slice/auth.slice';
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'https://api.scribo.in';
+const BASE_URL = import.meta.env.VITE_API_URL || 'https://api.scribo.in/api';
 
 const api = axios.create({
   baseURL: BASE_URL,
