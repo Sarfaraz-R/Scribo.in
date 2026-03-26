@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .dot-grid {
+    background-color: #020202;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .glow-main {
+    background: radial-gradient(
+      circle at center,
+      rgba(249, 115, 22, 0.15) 0%,
+      transparent 70%
+    );
+    filter: blur(60px);
+  }
+}
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar { display: none; }
+  .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+}

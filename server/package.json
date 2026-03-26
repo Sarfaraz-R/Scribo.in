@@ -1,0 +1,47 @@
+{
+  "name": "scribo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "npx kill-port 8001 && concurrently \"nodemon src/server.js\" \"node src/workers/submission.worker.js\"",
+    "start": "node src/server.js",
+    "worker": "node src/workers/submission.worker.js",
+    "test": "NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --runInBand",
+    "test:watch": "NODE_ENV=test node --experimental-vm-modules node_modules/jest/bin/jest.js --watch"
+  },
+  "author": "Sarfaraz",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "prettier": "3.8.1"
+  },
+  "dependencies": {
+    "@socket.io/redis-adapter": "^8.3.0",
+    "axios": "^1.13.6",
+    "bcrypt": "^6.0.0",
+    "bullmq": "^5.70.4",
+    "concurrently": "^9.2.1",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dockerode": "^4.0.9",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.3.0",
+    "helmet": "^8.1.0",
+    "firebase": "^12.10.0",
+    "ioredis": "^5.10.0",
+    "jsonwebtoken": "^9.0.3",
+    "kill-port": "^2.0.1",
+    "mongoose": "^9.2.4",
+    "nodemailer": "^8.0.1",
+    "nodemon": "^3.1.14",
+    "pino": "^9.9.4",
+    "pino-pretty": "^13.1.2",
+    "socket.io": "^4.8.3",
+    "supertest": "^7.1.4",
+    "uuid": "^13.0.0",
+    "zod": "^4.1.11"
+  }
+}

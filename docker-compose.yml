@@ -1,0 +1,31 @@
+services:
+  redis:
+    image: redis:7-alpine
+    container_name: scribo-redis
+    ports:
+      - "6379:6379"
+    restart: always
+
+  cpp-sandbox:
+    build:
+      context: ./server/sandbox/Dockerfiles
+      dockerfile: cpp-sandbox.Dockerfile
+    image: cpp-sandbox
+
+  python-sandbox:
+    build:
+      context: ./server/sandbox/Dockerfiles
+      dockerfile: python-sandbox.Dockerfile
+    image: python-sandbox
+
+  javascript-sandbox:
+    build:
+      context: ./server/sandbox/Dockerfiles
+      dockerfile: javascript-sandbox.Dockerfile
+    image: javascript-sandbox
+
+  java-sandbox:
+    build:
+      context: ./server/sandbox/Dockerfiles
+      dockerfile: java-sandbox.Dockerfile
+    image: java-sandbox
