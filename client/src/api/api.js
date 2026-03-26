@@ -3,7 +3,7 @@ import axios from 'axios';
 import { store } from '../store/store';
 import { setUser, logout } from '../store/slice/auth.slice';
 
-const BASE_URL = import.meta.env.VITE_API_URL || 'http://16.170.148.105:8001';
+const BASE_URL =  'http://16.170.148.105:8001';
 
 const api = axios.create({
   baseURL: BASE_URL,
